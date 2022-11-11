@@ -19,12 +19,12 @@ spec:
         image: shclub/edu12-4:master 
         env:
         - name: SPRING_PROFILES_ACTIVE
-          value: "prd"
+          value: "dev"
         - name: SPRING_DATASOURCE_USERNAME
           value: "edu"
-        - name: SPRING_DATASOURCE_PASSWORD
-          value: "caravan"
-        - name: SPRING_DATASOURCE_URL
-          value: "jdbc:mariadb://helm-db-mariadb:3306/edu"
+        #- name: SPRING_DATASOURCE_PASSWORD
+        #  value: "caravan"
+        #- name: SPRING_DATASOURCE_URL
+        #  value: "jdbc:mariadb://helm-db-mariadb:3306/edu"
         ports:
         - containerPort: 8080
