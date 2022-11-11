@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/shclub/edu12-3:master
+        #image: ghcr.io/shclub/edu12-3:master
+        image: shclub/edu12-3:master
         env:
         - name: BACKEND_API_URL
           value: "http://backend" 
