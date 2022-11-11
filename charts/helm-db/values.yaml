@@ -154,7 +154,7 @@ initdbScripts:
   my_init_script.sh: |
      #!/bin/bash
      echo "init db script start"
-     mysql -P 3306 -uedu -pcaravan -e  "use edu; create sequence hibernate_sequence; create table EMPLOYEE (id int primary key,empName varchar(255),empDeptName varchar(255),empTelNo varchar(20),empMail  varchar(25));insert into EMPLOYEE  values(1,'1','1','1','1');";
+     mysql -P 3306 -uedu -pcaravan -e  "use edu; create sequence hibernate_sequence; create table EMPLOYEE (id int primary key,empName varchar(255),empDeptName varchar(255),empTelNo varchar(20),empMail  varchar(25));insert into EMPLOYEE  values(1,'1','1','1','1');SELECT NEXTVAL(hibernate_sequence)";
     
 ## @param initdbScriptsConfigMap ConfigMap with the initdb scripts (Note: Overrides `initdbScripts`)
 ##
