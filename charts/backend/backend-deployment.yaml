@@ -15,16 +15,10 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ghcr.io/shclub/edu12-4:v10 
-        #image: shclub/edu12-4:v10
+        image: ghcr.io/kt-cloudnative/springboot_crud_security_keycloak:v1
+        imagePullPolicy: Always
         env:
-        - name: SPRING_PROFILES_ACTIVE
-          value: "prd"
-        - name: SPRING_DATASOURCE_USERNAME
-          value: "edu"
-        - name: SPRING_DATASOURCE_PASSWORD
-          value: "caravan"
-        - name: SPRING_DATASOURCE_URL
-          value: "jdbc:mariadb://helm-db-mariadb:3306/edu"
+          - name: SPRING_PROFILES_ACTIVE
+            value: "local"
         ports:
-        - containerPort: 8080
+        - containerPort: 9080
