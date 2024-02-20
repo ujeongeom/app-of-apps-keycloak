@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: edu31-apps
+  name: edu-apps
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
   finalizers:
@@ -9,17 +9,17 @@ metadata:
 
 spec:
 
-  project: edu31
+  project: default
   
   source:
-    repoURL: https://github.com/shclub/edu14-2.git
+    repoURL: https://github.com/kt-cloudnative/app-of-apps-keycloak.git
     targetRevision: HEAD
     path: apps
   
   destination:
     server: https://kubernetes.default.svc
     # The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace
-    namespace: edu31
+    namespace: default
   
   syncPolicy:
     automated: 
