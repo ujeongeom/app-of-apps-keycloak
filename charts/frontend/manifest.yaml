@@ -46,11 +46,11 @@ metadata:
 spec:
   tls:
   - hosts:
-    - frontend-keycloak-ssl.kteducation.duckdns.org
+    - frontend-keycloak-ssl-apps.kteducation.duckdns.org
     secretName: edu-tls
     # kubectl create secret tls edu-tls --cert /certs/wildcard-cert.pem --key /certs/wildcard-key.pem -n default
   rules:
-  - host: frontend-keycloak-ssl.kteducation.duckdns.org
+  - host: frontend-keycloak-ssl-apps.kteducation.duckdns.org
     http:
       paths:
       - path: /
