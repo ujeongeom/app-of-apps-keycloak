@@ -11,7 +11,7 @@ spec:
   project: default
   
   source:
-    repoURL: https://github.com/kt-cloudnative/app-of-apps-keycloak.git
+    repoURL: https://github.com/ujeongeom/app-of-apps-keycloak.git
     targetRevision: HEAD
     path: charts/frontend
   
