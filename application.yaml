@@ -3,16 +3,16 @@ kind: Application
 metadata:
   name: edu-apps
   namespace: argocd
-  # Add a this finalizer ONLY if you want these to cascade delete.
+  # Add a this finalizer ONLY if you want these to cascade delete. argocd를 사용할 것이어서 ns 바꾸면 안됨
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 
 spec:
-
+  # argocd 만들때 project 이름
   project: default
   
   source:
-    repoURL: https://github.com/kt-cloudnative/app-of-apps-keycloak.git
+    repoURL: https://github.com/ujeongeom/app-of-apps-keycloak.git
     targetRevision: HEAD
     path: apps
   
