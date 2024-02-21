@@ -35,14 +35,14 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: ClusterIP
+  type: NodePort
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: front-duckdns-ingress
   annotations:
-    kubernetes.io/ingress.class: "nginx"
+    ingressClassName: nginx
 spec:
 #  tls:
 #  - hosts:
@@ -50,7 +50,7 @@ spec:
 #    secretName: edu-tls
 #    # kubectl create secret tls edu-tls --cert /certs/wildcard-cert.pem --key /certs/wildcard-key.pem -n default
   rules:
-  - host: frontend-keycloak2.kteducation.duckdns.org
+  - host: ujeongeom.duckdns.org
     http:
       paths:
       - path: /
