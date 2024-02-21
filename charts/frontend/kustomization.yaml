@@ -4,4 +4,4 @@ resources:
 - manifest.yaml
 images:
 - name: ghcr.io/ujeongeom/springboot_crud_security_keycloak:master
-  newTag: "20240221085628"
+  newTag: "20240221111743"
